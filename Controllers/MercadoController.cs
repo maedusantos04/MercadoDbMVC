@@ -43,5 +43,14 @@ namespace MERCADO_MVC.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public IActionResult Deletar(int id)
+        {
+            _repository.Remover(id);
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

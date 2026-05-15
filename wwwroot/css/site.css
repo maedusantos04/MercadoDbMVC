@@ -1,325 +1,100 @@
-/* --- ESTILIZAÇÃO DO CABEÇALHO (NAVBAR) --- */
-
-/* Ajuste no topo para alinhar tudo */
-header {
-    width: 100%;
+body {
+    background-color: #f8faf9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
-}
-
-/* Nome da Atividade (Link Principal) */
-header a.navbar-brand, 
-header .ATIVIDADE_MVC { 
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #2a7a70;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-/* Remove as bolinhas da lista e centraliza os links */
-header ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 25px; /* Espaço entre Home e Privacy */
-    margin: 0;
-}
-
-header ul li a {
-    text-decoration: none;
-    color: #95a5a6;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-/* Efeito de linha passando embaixo ao passar o mouse */
-header ul li a::after {
-    content: '';
-    width: 0;
-    height: 2px;
-    background: #4db6ac;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    transition: width 0.3s;
-}
-
-header ul li a:hover {
-    color: #4db6ac;
-}
-
-header ul li a:hover::after {
-    width: 100%;
-}
-
-/* --- AJUSTES NOS TEXTOS DE TÍTULO --- */
-
-h1 {
-    font-size: 2.2rem;
-    color: #2c3e50;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
-/* O texto "Total de Produtos" */
-p {
-    color: #7f8c8d;
-    font-size: 1rem;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-/* Ajuste fino no link "Novo Produto" para parecer um botão flutuante */
-a[asp-action="Cadastro"] {
-    background-color: #4db6ac;
-    color: white !important; /* Força a cor branca */
-    padding: 10px 25px;
-    border-radius: 30px;
-    font-size: 0.8rem;
-    box-shadow: 0 4px 10px rgba(77, 182, 172, 0.3);
-    border: none;
-}
-
-a[asp-action="Cadastro"]:hover {
-    background-color: #3d968e;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(77, 182, 172, 0.4);
-}
-
-/* Configuração Geral do Corpo */
-body {
-    background-color: #f8faf9;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza tudo horizontalmente */
     margin: 0;
     padding: 40px 20px;
 }
 
-/* Título e Texto de Total */
-h1 {
-    color: #2c3e50;
-    margin-bottom: 5px;
-    font-weight: 300;
-    letter-spacing: -1px;
-}
-
-.total-count { /* Se você puder adicionar essa classe no <p> */
-    color: #7f8c8d;
-    font-size: 0.9rem;
+header .ATIVIDADE_MVC { 
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2a7a70;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 20px;
 }
 
-/* Link Novo Produto - Deixando mais sutil */
-a[asp-action="Cadastro"] {
-    display: inline-block;
-    margin-bottom: 30px;
-    color: #4db6ac;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 1px solid #4db6ac;
-    padding: 8px 20px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
-
-a[asp-action="Cadastro"]:hover {
-    background-color: #4db6ac;
-    color: white;
-}
-
-/* Tabela e Estrutura de Cards */
 table {
     width: 100%;
-    max-width: 850px; /* Limita a largura para não espalhar demais */
+    max-width: 900px;
     border-collapse: separate;
     border-spacing: 0 12px;
 }
 
-thead {
-    display: none; /* Mantemos o cabeçalho oculto */
+thead th {
+    color: #2a7a70;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-align: left;
 }
 
 tbody tr {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff; /* Branco puro para ficar mais delicado */
-    border: 1px solid #e0f2f1; /* Bordinha bem fina */
-    border-radius: 50px;
-    padding: 8px 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* Sombra bem suave */
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
 }
 
-tbody tr:hover {
-    transform: translateY(-2px); /* Flutua levemente */
-    box-shadow: 0 6px 15px rgba(69, 176, 163, 0.1);
-    background-color: #f1fdfc;
+/* Arredondamento das pontas da linha */
+tbody tr td:first-child { border-radius: 50px 0 0 50px; padding-left: 30px; font-weight: 600; color: #2a7a70; }
+tbody tr td:last-child { border-radius: 0 50px 50px 0; padding-right: 30px; text-align: right; }
+
+td { padding: 20px 15px; color: #555; vertical-align: middle; }
+
+.form-excluir {
+    display: inline !important;
+    background: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
 }
 
-/* Colunas (td) */
-td {
-    padding: 10px;
-    color: #444;
-    font-size: 0.95rem;
-}
-
-/* Nome do Produto */
-td:nth-child(1) {
-    font-weight: 600;
-    color: #2a7a70;
-    min-width: 140px;
-}
-
-/* Descrição (mais clarinha) */
-td:nth-child(2) {
-    flex-grow: 1;
-    color: #95a5a6;
-    font-size: 0.85rem;
-}
-
-/* Quantidade e Preço */
-td:nth-child(3), td:nth-child(4) {
-    min-width: 80px;
-    text-align: right;
-    font-variant-numeric: tabular-nums;
-}
-
-/* Botão Excluir - Versão Minimalista */
-button[type="button"] {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    color: #b2bec3;
-    border-radius: 20px;
-    padding: 5px 15px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.2s;
-    margin-left: 15px;
-}
-
-button[type="button"]:hover {
-    background-color: #ff7675;
-    border-color: #ff7675;
+.btn-excluir {
+    background-color: #5bb3ab;
     color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 18px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
 }
+.btn-excluir:hover { background-color: #ff7675; }
 
-/* Rodapé */
-footer {
-    margin-top: 50px;
-    font-size: 0.8rem;
-    color: #bdc3c7;
-}
-
-/* --- ESTILIZAÇÃO DO FORMULÁRIO DE CADASTRO --- */
-
-/* Container do Formulário */
-form {
+.form-cadastro {
     background-color: #ffffff;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     width: 100%;
-    max-width: 500px; /* Mantém o formulário com uma largura elegante */
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
 }
 
-/* Estilo para cada grupo (Rótulo + Input) */
-form div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
+.form-cadastro div { display: flex; flex-direction: column; gap: 5px; }
 
-/* Rótulos (Labels) */
-label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #2a7a70;
-    margin-left: 5px;
-}
+.form-cadastro label { font-size: 0.85rem; font-weight: 600; color: #2a7a70; }
 
-/* Campos de entrada (Inputs) */
-input[type="text"], 
-input[type="number"], 
-textarea {
+.form-cadastro input {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #e0f2f1;
-    border-radius: 12px; /* Cantos arredondados sutis */
-    background-color: #fcfdfd;
-    color: #2c3e50;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    box-sizing: border-box; /* Garante que o padding não quebre a largura */
+    border-radius: 12px;
+    box-sizing: border-box;
 }
 
-/* Efeito ao clicar no campo */
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #4db6ac;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(77, 182, 172, 0.1);
-}
-
-/* Botão Salvar (Verde Água) */
-button[type="submit"], 
-input[type="submit"] {
+.form-cadastro button {
     background-color: #4db6ac;
     color: white;
     border: none;
     padding: 15px;
     border-radius: 12px;
     font-weight: bold;
-    font-size: 1rem;
     cursor: pointer;
-    transition: all 0.3s ease;
     margin-top: 10px;
-}
-
-button[type="submit"]:hover, 
-input[type="submit"]:hover {
-    background-color: #3d968e;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(77, 182, 172, 0.3);
-}
-
-/* Link Voltar para a Lista */
-a[asp-action="Index"], 
-.voltar-link {
-    display: block;
-    text-align: center;
-    margin-top: 15px;
-    color: #95a5a6;
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: color 0.2s;
-}
-
-a[asp-action="Index"]:hover {
-    color: #4db6ac;
-    text-decoration: underline;
-}
-
-/* Título da página de cadastro */
-h2 {
-    font-weight: 300;
-    color: #2c3e50;
-    letter-spacing: -1px;
 }

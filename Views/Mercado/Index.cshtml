@@ -1,10 +1,23 @@
 @model List<MERCADO_MVC.Models.Mercado>
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos do Mercado</title>
+    <link rel="stylesheet" href="~/css/site.css"> </head>
 <body>
-    <h1>Produtos do Mercado</h1>
-    <p>Total de Produtos: @ViewBag.TotalProdutos</p>
 
-    <a asp-controller="Mercado" asp-action="Cadastro">Novo Produto</a>
+    <header>
+        <div class="ATIVIDADE_MVC">ATIVIDADE_MVC</div>
+    </header>
+
+    <h1>Produtos do Mercado</h1>
+    <p class="total-count">Total de Produtos: @ViewBag.TotalProdutos</p>
+
+    <div style="width: 100%; max-width: 900px; text-align: left;">
+        <a asp-controller="Mercado" asp-action="Cadastro" class="btn-novo-produto">Novo Produto</a>
+    </div>
 
     <table>
         <thead>
@@ -13,7 +26,7 @@
                 <th>Descrição</th>
                 <th>Quantidade</th>
                 <th>Preço</th>
-                <th>Ações</th>
+                <th style="text-align: right;">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -22,13 +35,22 @@
                 <tr>
                     <td>@m.Produto</td>
                     <td>@m.Descricao</td>
-                    <td>@m.Quantidade</td>
-                    <td>@m.Preco.ToString("N2")</td>
+                    <td style="text-align: center;">@m.Quantidade</td>
+                    <td style="text-align: right;">R$ @m.Preco.ToString("N2")</td>
                     <td>
-                        <button type="button">Excluir</button>
+                        <form class="form-excluir" asp-controller="Mercado" asp-action="Deletar" method="post" onsubmit="return confirm('Deseja realmente deletar?');">
+                            <input type="hidden" value="@m.Id" name="id">   
+                            <button type="submit" class="btn-excluir">Excluir</button>
+                        </form>                    
                     </td>
                 </tr>
             }
         </tbody>
     </table>
+
+    <footer>
+        © 2026 - ATIVIDADE_MVC
+    </footer>
+
 </body>
+</html>

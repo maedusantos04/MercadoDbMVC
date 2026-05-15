@@ -145,4 +145,4 @@ C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\MERCADO-MVC.pdb
 C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\MERCADO-MVC.genruntimeconfig.cache
 C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\ref\MERCADO-MVC.dll
 C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\MERCADO-MVC.sourcelink.json
-C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\compressed\zjtbtj9ud6-{0}-gqgdilo6py-gqgdilo6py.gz
+C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\compressed\zjtbtj9ud6-{0}-u6o0sflecl-u6o0sflecl.gz

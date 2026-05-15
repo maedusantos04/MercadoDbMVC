@@ -1,7 +1,7 @@
 <body>
     <h1>Cadastrar Produto</h1>
 
-    <form action="" method="post">
+    <form class="form-cadastro" asp-action="Cadastro" method="post">
         <div>
             <label for="produto">Produto</label>
             <input type="text" name="produto" required>
@@ -25,5 +25,6 @@
         <button type="submit">Salvar</button>
     </form>
 
+    <br>
     <a asp-controller="Mercado" asp-action="Index">Voltar para a Lista</a>
 </body>
