@@ -1,0 +1,29 @@
+<body>
+    <h1>Cadastrar Produto</h1>
+
+    <form action="" method="post">
+        <div>
+            <label for="produto">Produto</label>
+            <input type="text" name="produto" required>
+        </div>
+        <div>
+            <label for="descricao">Descrição</label>
+            <input type="text" name="descricao">
+        </div>
+        <div>
+            <label for="quantidade">Quantidade</label>
+            <input type="number" name="quantidade" required>
+        </div>
+        <div>
+            <label for="preco">Preço</label>
+            <input type="text" name="preco" required>
+        </div>
+        <div>
+            <label for="comentario">Comentário</label>
+            <input type="text" name="comentario">
+        </div>
+        <button type="submit">Salvar</button>
+    </form>
+
+    <a asp-controller="Mercado" asp-action="Index">Voltar para a Lista</a>
+</body>

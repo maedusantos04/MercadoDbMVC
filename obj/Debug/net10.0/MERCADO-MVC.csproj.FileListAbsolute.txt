@@ -129,7 +129,6 @@ C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\rjsmcshtml.dswa.cache
 C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\scopedcss\bundle\MERCADO-MVC.styles.css
 C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\scopedcss\projectbundle\MERCADO-MVC.bundle.scp.css
-C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\compressed\zjtbtj9ud6-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\compressed\i25418zehh-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\compressed\hop051xxnf-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\compressed\2f6mxtlns3-{0}-er7ijbn3ht-er7ijbn3ht.gz
@@ -145,3 +144,5 @@ C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\refint\MERCADO-MVC.dl
 C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\MERCADO-MVC.pdb
 C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\MERCADO-MVC.genruntimeconfig.cache
 C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\ref\MERCADO-MVC.dll
+C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\MERCADO-MVC.sourcelink.json
+C:\Users\24060684805\Desktop\MERCADO-MVC\obj\Debug\net10.0\compressed\zjtbtj9ud6-{0}-gqgdilo6py-gqgdilo6py.gz

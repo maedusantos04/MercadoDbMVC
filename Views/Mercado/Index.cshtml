@@ -1,7 +1,10 @@
+@model List<MERCADO_MVC.Models.Mercado>
+
 <body>
     <h1>Produtos do Mercado</h1>
+    <p>Total de Produtos: @ViewBag.TotalProdutos</p>
 
-    <a href="">Novo Produto</a>
+    <a asp-controller="Mercado" asp-action="Cadastro">Novo Produto</a>
 
     <table>
         <thead>
@@ -14,15 +17,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Arroz 5kg</td>
-                <td>Arroz branco tipo 1</td>
-                <td>20</td>
-                <td>29,90</td>
-                <td>
-                    <button>Excluir</button>
-                </td>
-            </tr>
+            @foreach(var m in Model)
+            {
+                <tr>
+                    <td>@m.Produto</td>
+                    <td>@m.Descricao</td>
+                    <td>@m.Quantidade</td>
+                    <td>@m.Preco.ToString("N2")</td>
+                    <td>
+                        <button type="button">Excluir</button>
+                    </td>
+                </tr>
+            }
         </tbody>
     </table>
 </body>

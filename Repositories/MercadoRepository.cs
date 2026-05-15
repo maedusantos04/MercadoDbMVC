@@ -20,5 +20,11 @@ namespace MERCADO_MVC.Repositories
         {
             return _context.Mercado.ToList();
         }
+
+        public void Adicionar(Mercado m)
+        {
+            _context.Mercado.Add(m);
+            _context.SaveChanges();
+        }
     }
 }
